@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+<div class="bg">
+    
+<div class="container" style="background-image:repeating-linear-gradient(aliceblue,lightblue);width: 600px;" >
+        
+    <h1 style="align-items: center">Login</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <div class="container" style="align-content: center;margin-left: 200px">
+        <input type="submit" style="align-content: center" value="Login" class="btn btn-default">
+        </div><br>
+        <div class="container" style="align-content: center;margin-left: 180px">
+                <a href="{% url 'signup' %}" class="btn btn-danger btn-rounded">Signup now!</a>
+        </div>
+         </form>
+</div>
+</div>
+{% endblock %}

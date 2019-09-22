@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block additional_styles %}
+<style>
+   body {
+       background-size: cover;
+    background-image: url('{% static 'images/white.jpg' %}') ;
+   }
+</style>
+{% endblock %}
+    
+{% block content %}
+<h2 style="font-family: sans-serif;font: bold; margin-left: 50px">Choose the plan that's right for you!</h2>
+<br><p style="font-family: sans-serif; margin-left: 50px">Download or upgrade at any time</p>
+<div class="container" style="margin-left: 400px">
+        <table style="width:100%">
+                <tr>
+                  <th><div style="border: solid 50px #FF0000;width: 150px;height: 100px;-webkit-text-fill-color: aliceblue;
+                    "><p style="margin-right: 50px;font-family: sans-serif;font: bold">Basic</p>
+                 </div></th>
+                  <th> <div style="border: solid 50px #FF0000;width: 150px;height: 100px;-webkit-text-fill-color: aliceblue;
+                    "><p style="margin-right: 50px;font-family: sans-serif;font: bold"> Standard </p></div>
+                 </div></th> 
+                  <th><div style="border: solid 50px #FF0000;width: 150px;height: 100px;-webkit-text-fill-color: aliceblue;
+                    "><p style="margin-right: 50px;font-family: sans-serif;font: bold"> Premium </p></div>
+                 </div></th>
+                 <th><div style="border: solid 50px #FF0000;width: 150px;height: 100px;-webkit-text-fill-color: aliceblue;
+                    "><p style="margin-right: 50px;font-family: sans-serif;font: bold"> Platinum </p></div>
+                 </div></th>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <div class="container" ></div>
+            <table style="margin-left:80px;">
+                <tr>
+                    <th>
+                            Monthly price after free month ends on 22/10/19
+                    </th>
+                    <th><div style="border: solid 40px #ffffff;width: 150px;height: 100px;-webkit-text-fill-color: aliceblue;
+                        "><p style="margin-right: 40px;font-family: sans-serif;font: bold;margin-left: 50px"> &#10004; </p></div>
+                     </div></th>
+                     <th><div style="border: solid 40px #ffffff;width: 150px;height: 100px;-webkit-text-fill-color: aliceblue;
+                        "><p style="margin-right: 40px;font-family: sans-serif;font: bold;margin-left: 180px"> &#10004; </p></div>
+                     </div></th>
+                     <th><div style="border: solid 40px #ffffff;width: 150px;height: 100px;-webkit-text-fill-color: aliceblue;
+                        "><p style="margin-right: 40px;font-family: sans-serif;font: bold;margin-left: 330px"> &#10004; </p></div>
+                     </div></th>
+                     <th><div style="border: solid 40px #ffffff;width: 150px;height: 100px;-webkit-text-fill-color: aliceblue;
+                        "><p style="margin-right: 40px;font-family: sans-serif;font: bold;margin-left: 460px"> &#10004; </p></div>
+                     </div></th>
+                </tr>
+                
+                <tr>
+                        <th>
+                                HD available
+                        </th>
+                        <th><div style="border: solid 40px #ffffff;width: 150px;height: 100px;-webkit-text-fill-color: aliceblue;
+                            "><p style="margin-right: 40px;font-family: sans-serif;font: bold;margin-left: 50px"> &#10060; </p></div>
+                         </div></th>
+                         <th><div style="border: solid 40px #ffffff;width: 150px;height: 100px;-webkit-text-fill-color: aliceblue;
+                            "><p style="margin-right: 40px;font-family: sans-serif;font: bold;margin-left: 180px"> &#10004; </p></div>
+                         </div></th>
+                         <th><div style="border: solid 40px #ffffff;width: 150px;height: 100px;-webkit-text-fill-color: aliceblue;
+                            "><p style="margin-right: 40px;font-family: sans-serif;font: bold;margin-left: 330px"> &#10004; </p></div>
+                         </div></th>
+                         <th><div style="border: solid 40px #ffffff;width: 150px;height: 100px;-webkit-text-fill-color: aliceblue;
+                            "><p style="margin-right: 40px;font-family: sans-serif;font: bold;margin-left: 460px"> &#10004; </p></div>
+                         </div></th>
+                    </tr>
+                    <tr>
+                            <th>
+                                    Watch on your laptop and TV
+                            </th>
+                            <th><div style="border: solid 40px #ffffff;width: 150px;height: 100px;-webkit-text-fill-color: aliceblue;
+                                "><p style="margin-right: 40px;font-family: sans-serif;font: bold;margin-left: 50px"> &#10004; </p></div>
+                             </div></th>
+                             <th><div style="border: solid 40px #ffffff;width: 150px;height: 100px;-webkit-text-fill-color: aliceblue;
+                                "><p style="margin-right: 40px;font-family: sans-serif;font: bold;margin-left: 180px"> &#10004; </p></div>
+                             </div></th>
+                             <th><div style="border: solid 40px #ffffff;width: 150px;height: 100px;-webkit-text-fill-color: aliceblue;
+                                "><p style="margin-right: 40px;font-family: sans-serif;font: bold;margin-left: 330px"> &#10004; </p></div>
+                             </div></th>
+                             <th><div style="border: solid 40px #ffffff;width: 150px;height: 100px;-webkit-text-fill-color: aliceblue;
+                                "><p style="margin-right: 40px;font-family: sans-serif;font: bold;margin-left: 460px"> &#10004; </p></div>
+                             </div></th>
+                        </tr>
+                        <tr>
+                                <th>
+                                        Prices per month
+                                </th>
+                                <th><div style="border: solid 40px #ffffff;width: 150px;height: 100px;
+                                    "><p style="margin-right: 40px;font-family: sans-serif;font: bold;margin-left: 50px"> 400 </p></div>
+                                 </div></th>
+                                 <th><div style="border: solid 40px #ffffff;width: 150px;height: 100px;
+                                    "><p style="margin-right: 40px;font-family: sans-serif;font: bold;margin-left: 180px"> 600 </p></div>
+                                 </div></th>
+                                 <th><div style="border: solid 40px #ffffff;width: 150px;height: 100px;
+                                    "><p style="margin-right: 40px;font-family: sans-serif;font: bold;margin-left: 330px"> 700 </p></div>
+                                 </div></th>
+                                 <th><div style="border: solid 40px #ffffff;width: 150px;height: 100px;
+                                    "><p style="margin-right: 40px;font-family: sans-serif;font: bold;margin-left: 460px;"> 800 </p></div>
+                                 </div></th>
+                            </tr>
+            </table>
+        </div>
+            
+
+                    
+</div>
+{% endblock %}
+

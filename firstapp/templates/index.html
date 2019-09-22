@@ -1,0 +1,58 @@
+
+
+ {% extends 'base.html' %}
+ {% load staticfiles %}                 
+ {% block content %}         
+ {% if user.is_authenticated %}        
+           <div id="demo" class="carousel slide" data-ride="carousel">
+              <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+              </ul>
+              <div class="carousel-inner">
+                <div class="carousel-item active" style="">
+                <div class="container" style="background-color: black;height: 600px; width : 600px">
+                  <img src="{% static "images/sacred.png" %}" style="height: inherit;width: 600px" alt="Los Angeles">
+                </div>
+                </div>
+                <div class="carousel-item">
+                <div class="container" style="background-color: black;height: 600px; width : 600px">
+                    <img src="{% static "images/selection-day.jpg" %}" style="height: inherit;width: 600px" alt="Los Angeles">
+                </div>
+                </div>
+                <div class="carousel-item">
+                <div class="container" style="background-color: black;height: 600px; width : 600px">
+                    <img src="{% static "images/shark.png" %}" style="height: inherit;width: 600px" alt="Los Angeles">
+                </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </a>
+              <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </a>
+            
+            </div>
+           {% else %}
+           <div class="container">
+              <div class="bg">
+                  <img src="{% static "images/bg.png" %}" alt="" class="center">
+              </div>
+           <div class="col-md-12 text-center no-repeat">
+              <a href="{% url 'signup' %}" class="btn btn-danger btn-rounded">Sign Up now!</a>
+            </div>
+          
+        {% endif %}
+        </div>
+{% endblock %}
+        
+        
+                    
+
+            
+                
+        
+
+     

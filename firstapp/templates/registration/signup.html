@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+<div class="bg">
+    
+<div class="container" style="background-image:repeating-linear-gradient(aliceblue,lightblue)"{% static "images/navbarlogo.png" %}" " >
+        
+    <h1 style="align-items: center">Sign Up</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input type="submit" value="Sign Up" class="btn btn-default">
+    </form>
+    <a href="{% url 'login' %}" class="btn btn-danger btn-rounded">Login now!</a>
+</div>
+</div>
+{% endblock %}
+
