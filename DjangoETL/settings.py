@@ -26,7 +26,6 @@ SECRET_KEY = '0%kj7qxh56$%ch-t$ud@i8qb)*)phtw^b9#!i(yob0jcmb%67o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['netflixetl.herokuapp.com']
 
 
 # Application definition
@@ -40,13 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'firstapp',
     'crispy_forms',
-    'herokuapp',
     
 ]
 
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -134,8 +131,3 @@ PROJECT_ROOT   =   os.path.join(os.path.abspath(__file__))
 LOGIN_REDIRECT_URL = 'index'
 LOGOUT_REDIRECT_URL = 'index'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-import dj_database_url 
-prod_db  =  dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(prod_db)
