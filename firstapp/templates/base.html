@@ -3,7 +3,14 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}{% endblock %}</title>
+        <title>{% if user.is_authenticated %}
+          {{"Hello "}}{{ user.username }}
+          {% else %}
+          {{"Netflix"}}
+          {% endif %}
+
+        </title>
+        <link rel="shortcut icon" href="{% static "images/favicon.ico" %}">
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Bootstrap -->
@@ -24,11 +31,13 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+
+
     </head>
     <body>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top" id="navbar">
                     <div class="container">
-                      <a class="navbar-brand" href="#">
+                      <a class="navbar-brand" href="{% url 'index' %}">
                             <img style="height: 40px" src="{% static "images/navbarlogo.png" "%}"alt="">
                           </a>
                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
