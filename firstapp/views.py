@@ -31,7 +31,7 @@ def signup(request):
   form=forms.UserCreateForm
   return render(request,'registration/signup.html',{'form': form})
 
-  def login(request):
+  def Login(request):
     if request.method == 'POST': 
         username = request.POST['username'] 
         password = request.POST['password'] 
@@ -44,3 +44,16 @@ def signup(request):
             messages.info(request, f'account done not exit please sign in') 
     form = AuthenticationForm() 
     return render(request, 'registration/login.html', {'form':form, 'title':'log in'}) 
+
+def about(request):
+  return render(request, 'trailers.html')
+
+def about1(request):
+  return render(request, 'sacred.html')
+
+
+def about2(request):
+  return render(request, 'shark.html')
+
+def epi(request):
+  return render(request, 'episodes.html')

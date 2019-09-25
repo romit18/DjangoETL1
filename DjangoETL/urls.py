@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from firstapp.views import index
-from firstapp.views import signup,services
+from firstapp.views import signup,services,about,about1,about2,epi
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,5 +24,9 @@ urlpatterns = [
     path('services/',services,name="services"),
     path('signup/',signup,name='signup'),
     path('accounts/',include('django.contrib.auth.urls')),
+    path('selectionday/',about,name='blog1'),
+    path('sacred/',about1,name='blog2'),
+    path('shark/',about2,name='blog3'),
+    path('episodes/',epi,name='blog4')
 
 ]
