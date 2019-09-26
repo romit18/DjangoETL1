@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls import url
 from firstapp.views import index
-from firstapp.views import signup,services,about,about1,about2,epi
+from firstapp.views import signup,services,about,about1,about2,epi,profile,delete_user
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,6 +28,9 @@ urlpatterns = [
     path('selectionday/',about,name='blog1'),
     path('sacred/',about1,name='blog2'),
     path('shark/',about2,name='blog3'),
-    path('episodes/',epi,name='blog4')
+    path('episodes/',epi,name='blog4'),
+    path('profile/',profile,name='blog5'),
+    url(r'^delete/(?P<username>[\w|\W.-]+)/$', delete_user, name='delete-user')
+
 
 ]

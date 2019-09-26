@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import User
 from django.views.generic import CreateView
 from django.contrib.auth import login,authenticate,logout
 from django.contrib.auth.forms import UserCreationForm
@@ -51,9 +51,31 @@ def about(request):
 def about1(request):
   return render(request, 'sacred.html')
 
-
 def about2(request):
   return render(request, 'shark.html')
 
 def epi(request):
   return render(request, 'episodes.html')
+
+def profile(request):
+  return render(request,'profile.html')
+
+
+def delete_user(request,username):
+
+  context = ""
+  try:
+    u = User.objects.get(username=username)
+    print(username)
+    u.delete()
+    context += 'The user is deleted.'      
+  except User.DoesNotExist: 
+    context += 'The user is deleted.'
+  except Exception as e: 
+   context=""
+    
+     
+
+    
+
+  return render(request, 'delete.html', {"context":context}) 

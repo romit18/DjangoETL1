@@ -1,0 +1,23 @@
+{% extends 'base.html' %} 
+{% block content %}
+<div class="logo-container logo-branded-horizontal" style="color:white;height=100%;background-color: rgba(0, 0, 0, 0.8);">My Profile
+        <p >Current Membership: <br>
+        </p>
+        <p>
+             Name :  {{ user.username }}<br>
+             Created Date : 26th September, 2019
+        </p>
+      
+{% if user_subscription.active != False %}
+Next payment due: 25th October, 2019
+<form action ="{% url 'delete-user' username=user.username %}">
+<div class="col-md-12 text-center no-repeat">
+        <input type="submit" value="Cancel subscription" class="btn btn-danger btn-rounded">
+      </div>
+      </form>
+Cancel subscription {% else %}
+You don't have an active membership plan. Check them out here
+
+{% endif %}
+</div>
+{% endblock content %}
